@@ -1,5 +1,5 @@
 import './ItemList.css'
-// import {memo} from "react"
+import {memo} from "react"
 import Item from "../Item/Item.jsx"
 
 
@@ -16,6 +16,4 @@ const ItemList = ({products}) => {
     );
 }
 
-// export default memo(ItemList)
-
-export default ItemList
+export default memo(ItemList)
