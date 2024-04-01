@@ -1,11 +1,26 @@
-.item-list-container {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.ItemListContainer {
+    max-width: 1280px;
+    display:contents;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 80vh;
+    padding: 1rem;
+    margin: 1rem;
 }
 
-.item-list-container h1 {
-    color: #333;
-    font-size: 24px;
+div img{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 50rem;
 }
+
+div h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+
+

@@ -1,20 +1,37 @@
-import CartWidget from '../CartWidget/CartWidget';
-import { Link } from "react-router-dom";
-
+import './NavBar.css'
+import CartWidget from "../CartWidget/CartWidget";
+import { Link, NavLink } from "react-router-dom";
+import logoIco from '../../assets/img_elementos/LOGOZtm-BLANCO.png';
 
 const NavBar = () => {
-    return (
-        <nav className="NavBar">
-            <img src="/logo-ico.ico" alt="Zeppelint Cloth Logo" className="logo" />
-            {/* <h3> Zeppelint Cloth</h3> */}
-            <section>
-                <Link to={"/category/remeras"}>Remeras</Link>
-                <Link to={"/category/gorras"}>Gorras</Link>
-                <Link to={"/category/buzos"}>Buzos</Link>
-            </section>
-            <CartWidget/>
-        </nav>
-    )
+return (
+    <nav className="NavBar">
+        <Link to={"/"}> 
+            <img src={logoIco} alt="Logo" />
+        </Link>
+        <section className='Categories'>
+            <NavLink
+            to={"/category/Remera"}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+            >
+            REMERAS
+            </NavLink>
+            <NavLink
+            to={"/category/Gorra"}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+            >
+            GORRAS
+            </NavLink>
+            <NavLink
+            to={"/category/Short"}
+            className={({ isActive }) => (isActive ? "ActiveOption" : "Option")}
+            >
+            SHORT
+            </NavLink>
+        </section>
+        <CartWidget />
+    </nav>
+);
 }
 
-export default NavBar 
+export default NavBar
